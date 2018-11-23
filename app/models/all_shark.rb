@@ -1,0 +1,2 @@
+class AllShark < ApplicationRecord
+end

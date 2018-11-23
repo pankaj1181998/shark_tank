@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Season: 1
+  no_in_series: 1
+  company: MyString
+  Deal: MyString
+  Industry: MyString
+  Entrepreneur_gender: MyString
+  amount: MyString
+  equity: MyString
+  valuation: MyString
+  corcoran: 1
+  cuban: 1
+  greiner: 1
+  herjavec: 1
+  john: 1
+  oleary: 1
+  harrington: 1
+  guest: 1
+  t_sharks: 1
+
+two:
+  Season: 1
+  no_in_series: 1
+  company: MyString
+  Deal: MyString
+  Industry: MyString
+  Entrepreneur_gender: MyString
+  amount: MyString
+  equity: MyString
+  valuation: MyString
+  corcoran: 1
+  cuban: 1
+  greiner: 1
+  herjavec: 1
+  john: 1
+  oleary: 1
+  harrington: 1
+  guest: 1
+  t_sharks: 1

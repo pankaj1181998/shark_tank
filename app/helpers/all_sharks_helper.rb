@@ -1,0 +1,2 @@
+module AllSharksHelper
+end
