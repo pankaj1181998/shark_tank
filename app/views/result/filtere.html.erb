@@ -1,3 +1,18 @@
+<script>
+	<% (1..18).each do |num|%>
+function myFunction<%= num %>() {
+    var x = document.getElementsByClassName("hide<%=num%>");
+    if (x.style.display === "none") 
+    {
+        x.style.display = "block";
+    } 
+    else {
+        x.style.display = "none";
+    }
+}
+<% end %>
+</script>
+
 
 <!-- **********************************Page Container****************************************** -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -12,8 +27,11 @@
      
         <div class="w3-container">
          
-
-        	here
+        <% (1..18).each do |x|%>
+          <button id="hide<%=x%>">Hide</button>
+		  <button id="show<%=x%>">Show</button>
+        <% end %>
+          
           </div>
 
 
@@ -31,56 +49,51 @@
 		  
 		  <table class="w3-table w3-striped">
 		    <tr>
-		      <th>Season</th>
-		      <th>No. in Series</th>
-		      <th>Company</th>
-		      <th>Deal</th>
-		      <th>Industry</th>
-		      <th>Entrepreneur Gender</th>
-		      <th>Amount</th>
-		      <th>Equity</th>
-		      <th>Valuation</th>
-		      <th>Corcoran</th>
-		      <th>Cuban</th>
-		      <th>Greiner</th>
-		      <th>Herjavec</th>
-		      <th>John</th>
-		      <th>O'leary</th>
-		      <th>Harrington</th>
-		      <th>Guest</th>
-		      <th>Total sharks</th>
+		      <th class="hide1">Season</th>
+		      <th class="hide2">No. in Series</th>
+		      <th class="hide3">Company</th>
+		      <th class="hide4">Deal</th>
+		      <th class="hide5">Industry</th>
+		      <th class="hide6">Entrepreneur Gender</th>
+		      <th class="hide7">Amount</th>
+		      <th class="hide8">Equity</th>
+		      <th class="hide9">Valuation</th>
+		      <th class="hide10">Corcoran</th>
+		      <th class="hide11">Cuban</th>
+		      <th class="hide12">Greiner</th>
+		      <th class="hide13">Herjavec</th>
+		      <th class="hide14">John</th>
+		      <th class="hide15">O'leary</th>
+		      <th class="hide16">Harrington</th>
+		      <th class="hide17">Guest</th>
+		      <th class="hide18">Total sharks</th>
 		    </tr>
 		    <% AllShark.all.each do |row| %>
 		    <tr>
-		      <td> <%=  row['Season'] %> </td>
-		      <td> <%=  row['no_in_series'] %> </td>
-		      <td> <%=  row['company'] %> </td>
-		      <td> <%=  row['Deal'] %> </td>
-		      <td> <%=  row['Industry'] %> </td>
-		      <td><%=  row['Entrepreneur_gender'] %> </td>
-		      <td> <%=  row['amount'] %> </td>
-		      <td> <%=  row['equity'] %> </td>
-		      <td> <%=  row['valuation'] %> </td>
-		      <td> <%=  row['corcoran'] %> </td>
-		      <td> <%=  row['cuban'] %> </td>
-		      <td> <%=  row['greiner'] %> </td>
-		      <td> <%=  row['herjavec'] %> </td>
-		      <td> <%=  row['john'] %> </td>
-		      <td> <%=  row["oleary"] %> </td>
-		      <td><%=  row['harrington'] %>  </td>
-		      <td> <%=  row['guest'] %> </td>
-		      <td> <%=  row['t_sharks'] %> </td>
+		      <td class="hide1"> <%=  row['Season'] %> </td>
+		      <td class="hide2"> <%=  row['no_in_series'] %> </td>
+		      <td class="hide3"> <%=  row['company'] %> </td>
+		      <td class="hide4"> <%=  row['Deal'] %> </td>
+		      <td class="hide5"> <%=  row['Industry'] %> </td>
+		      <td class="hide6"><%=  row['Entrepreneur_gender'] %> </td>
+		      <td class="hide7"> <%=  row['amount'] %> </td>
+		      <td class="hide8"> <%=  row['equity'] %> </td>
+		      <td class="hide9"> <%=  row['valuation'] %> </td>
+		      <td class="hide10"> <%=  row['corcoran'] %> </td>
+		      <td class="hide11"> <%=  row['cuban'] %> </td>
+		      <td class="hide12"> <%=  row['greiner'] %> </td>
+		      <td class="hide13"> <%=  row['herjavec'] %> </td>
+		      <td class="hide14"> <%=  row['john'] %> </td>
+		      <td class="hide15"> <%=  row["oleary"] %> </td>
+		      <td class="hide16"><%=  row['harrington'] %>  </td>
+		      <td class="hide17"> <%=  row['guest'] %> </td>
+		      <td class="hide18"> <%=  row['t_sharks'] %> </td>
 		    </tr>
 			<% end %>
 		  </table>
 		</div>
 
 		  
-
-
-
-
-
     <!-- End Right Column -->
     </div>
     
@@ -88,4 +101,4 @@
   </div>
   
   <!-- End Page Container -->
-</div>
+
