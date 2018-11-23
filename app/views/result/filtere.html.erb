@@ -25,12 +25,62 @@
 
     <!-- Right Column -->
     <div class="w3-twothird">
-    	<h1> working</h1>
-		<% AllShark.all.each do |row| %>
-			<%= p row['company'] %>
-			<br>	
-		<% end %> 
+    	
       
+		 <div class="w3-container">
+		  
+		  <table class="w3-table w3-striped">
+		    <tr>
+		      <th>Season</th>
+		      <th>No. in Series</th>
+		      <th>Company</th>
+		      <th>Deal</th>
+		      <th>Industry</th>
+		      <th>Entrepreneur Gender</th>
+		      <th>Amount</th>
+		      <th>Equity</th>
+		      <th>Valuation</th>
+		      <th>Corcoran</th>
+		      <th>Cuban</th>
+		      <th>Greiner</th>
+		      <th>Herjavec</th>
+		      <th>John</th>
+		      <th>O'leary</th>
+		      <th>Harrington</th>
+		      <th>Guest</th>
+		      <th>Total sharks</th>
+		    </tr>
+		    <% AllShark.all.each do |row| %>
+		    <tr>
+		      <td> <%=  row['Season'] %> </td>
+		      <td> <%=  row['no_in_series'] %> </td>
+		      <td> <%=  row['company'] %> </td>
+		      <td> <%=  row['Deal'] %> </td>
+		      <td> <%=  row['Industry'] %> </td>
+		      <td><%=  row['Entrepreneur_gender'] %> </td>
+		      <td> <%=  row['amount'] %> </td>
+		      <td> <%=  row['equity'] %> </td>
+		      <td> <%=  row['valuation'] %> </td>
+		      <td> <%=  row['corcoran'] %> </td>
+		      <td> <%=  row['cuban'] %> </td>
+		      <td> <%=  row['greiner'] %> </td>
+		      <td> <%=  row['herjavec'] %> </td>
+		      <td> <%=  row['john'] %> </td>
+		      <td> <%=  row["oleary"] %> </td>
+		      <td><%=  row['harrington'] %>  </td>
+		      <td> <%=  row['guest'] %> </td>
+		      <td> <%=  row['t_sharks'] %> </td>
+		    </tr>
+			<% end %>
+		  </table>
+		</div>
+
+		  
+
+
+
+
+
     <!-- End Right Column -->
     </div>
     
