@@ -50,6 +50,23 @@ function myFunction2() {
     }       
   }
 }
+function myFunction3() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput3");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
 </script>
 
 <script>
@@ -84,6 +101,7 @@ function showdata(xyz){
      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Season" title="Type in a Season">
     <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Enter Amount" title="Type in a name">
     <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Entrepreneur Gender" title="Type in a name">
+    <input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Company Name" title="Type in a name">
     <br>
     <hr>
     <!-- Right Column -->
