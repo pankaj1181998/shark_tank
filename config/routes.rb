@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :a_sharks
   get 'result/filtere'
   resources :all_sharks
   root :to => 'result#filtere'

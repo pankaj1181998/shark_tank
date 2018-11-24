@@ -10,7 +10,7 @@ require 'csv'
 csv_text = File.read(Rails.root.join('lib', 'seeds', '../shark_tank_data.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
  csv.each do |row|
-  t = AllShark.new
+  t = AShark.new
   t.Season = row['Season']
   t.no_in_series = row['No. in series']
   t.company = row['Company']

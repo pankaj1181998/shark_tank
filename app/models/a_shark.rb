@@ -1,0 +1,2 @@
+class AShark < ApplicationRecord
+end

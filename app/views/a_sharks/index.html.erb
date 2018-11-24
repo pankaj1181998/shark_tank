@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>A Sharks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Season</th>
+      <th>No in series</th>
+      <th>Company</th>
+      <th>Deal</th>
+      <th>Industry</th>
+      <th>Entrepreneur gender</th>
+      <th>Amount</th>
+      <th>Equity</th>
+      <th>Valuation</th>
+      <th>Corcoran</th>
+      <th>Cuban</th>
+      <th>Greiner</th>
+      <th>Herjavec</th>
+      <th>John</th>
+      <th>Oleary</th>
+      <th>Harrington</th>
+      <th>Guest</th>
+      <th>T sharks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_sharks.each do |a_shark| %>
+      <tr>
+        <td><%= a_shark.Season %></td>
+        <td><%= a_shark.no_in_series %></td>
+        <td><%= a_shark.company %></td>
+        <td><%= a_shark.Deal %></td>
+        <td><%= a_shark.Industry %></td>
+        <td><%= a_shark.Entrepreneur_gender %></td>
+        <td><%= a_shark.amount %></td>
+        <td><%= a_shark.equity %></td>
+        <td><%= a_shark.valuation %></td>
+        <td><%= a_shark.corcoran %></td>
+        <td><%= a_shark.cuban %></td>
+        <td><%= a_shark.greiner %></td>
+        <td><%= a_shark.herjavec %></td>
+        <td><%= a_shark.john %></td>
+        <td><%= a_shark.oleary %></td>
+        <td><%= a_shark.harrington %></td>
+        <td><%= a_shark.guest %></td>
+        <td><%= a_shark.t_sharks %></td>
+        <td><%= link_to 'Show', a_shark %></td>
+        <td><%= link_to 'Edit', edit_a_shark_path(a_shark) %></td>
+        <td><%= link_to 'Destroy', a_shark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A Shark', new_a_shark_path %>
